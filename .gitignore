@@ -3,6 +3,7 @@ target/
 generated/
 test-output/
 gwt-unitCache/
+WEB-INF/classes/
 
 # eclipse genereted
 .settings
@@ -12,6 +13,8 @@ gwt-unitCache/
 # java & gwt compiler
 *.class
 .gwt
+
+# errai
 .errai
 
 # other

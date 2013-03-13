@@ -1,4 +1,0 @@
-org.jboss.errai.samples.restdemo.client.shared.CustomerService
-org.jboss.errai.samples.restdemo.server.CustomerServiceImpl
-org.jboss.errai.samples.restdemo.client.local.App
-org.jboss.errai.samples.restdemo.client.shared.Customer

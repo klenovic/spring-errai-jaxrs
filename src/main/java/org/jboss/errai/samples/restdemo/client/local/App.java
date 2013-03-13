@@ -26,6 +26,7 @@ import javax.inject.Inject;
 import org.jboss.errai.bus.client.api.RemoteCallback;
 import org.jboss.errai.enterprise.client.jaxrs.MarshallingWrapper;
 import org.jboss.errai.enterprise.client.jaxrs.api.ResponseCallback;
+import org.jboss.errai.enterprise.client.jaxrs.api.RestClient;
 import org.jboss.errai.ioc.client.api.Caller;
 import org.jboss.errai.ioc.client.api.EntryPoint;
 import org.jboss.errai.samples.restdemo.client.shared.Customer;
@@ -97,6 +98,8 @@ public class App {
 
   @PostConstruct
   public void init() {
+      RestClient.setApplicationRoot("/seti/rest");
+      RestClient.setJacksonMarshallingActive(true);
     final Button create = new Button("Create", new ClickHandler() {
       @Override
       public void onClick(ClickEvent clickEvent) {

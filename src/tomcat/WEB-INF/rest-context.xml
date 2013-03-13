@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+    xsi:schemaLocation="
+			   http://www.springframework.org/schema/beans
+			   http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			   http://www.springframework.org/schema/context
+			   http://www.springframework.org/schema/context/spring-context-3.1.xsd
+			   http://www.springframework.org/schema/util
+			   http://www.springframework.org/schema/util/spring-util-3.1.xsd
+			   http://cxf.apache.org/jaxrs
+			   http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <import resource="classpath:META-INF/cxf/cxf.xml" />
+
+    <bean id="jacksonJaxbJsonProviderBean" class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider" />
+
+    <jaxrs:server id="webService" address="/">
+        <jaxrs:serviceBeans>
+            <ref bean="customerServiceBean" />
+        </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <ref bean="jacksonJaxbJsonProviderBean" />
+        </jaxrs:providers>
+    </jaxrs:server>
+
+    <bean id="customerServiceBean"
+        class="org.jboss.errai.samples.restdemo.server.CustomerServiceImpl" />
+</beans>
