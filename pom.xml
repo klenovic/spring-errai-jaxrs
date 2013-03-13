@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>spring-errai-tomcat-integration</name>
+    <name>spring-errai-jaxrs-integration</name>
     <groupId>com.nucleonsoft</groupId>
-    <artifactId>spring-errai-tomcat-integration</artifactId>
+    <artifactId>spring-errai-jaxrs</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
@@ -18,7 +18,7 @@
         <apache.cxf.version>2.7.3</apache.cxf.version>
         <spring.version>3.1.4.RELEASE</spring.version>
         <jackson.version>2.1.4</jackson.version>
-        <war.file.name>seti</war.file.name>
+        <war.file.name>spring-errai-jaxrs</war.file.name>
     </properties>
 
     <dependencies>

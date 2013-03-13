@@ -3,7 +3,7 @@ target/
 generated/
 test-output/
 gwt-unitCache/
-WEB-INF/classes/
+src/main/webapp/WEB-INF/classes/
 
 # eclipse genereted
 .settings
