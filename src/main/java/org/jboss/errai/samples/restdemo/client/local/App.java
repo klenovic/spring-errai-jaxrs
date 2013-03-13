@@ -98,7 +98,7 @@ public class App {
 
   @PostConstruct
   public void init() {
-      RestClient.setApplicationRoot("/seti/rest");
+      RestClient.setApplicationRoot("/spring-errai-jaxrs/rest");
       RestClient.setJacksonMarshallingActive(true);
     final Button create = new Button("Create", new ClickHandler() {
       @Override
