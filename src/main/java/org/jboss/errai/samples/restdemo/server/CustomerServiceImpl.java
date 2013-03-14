@@ -28,12 +28,14 @@ import javax.ws.rs.core.Response;
 
 import org.jboss.errai.samples.restdemo.client.shared.Customer;
 import org.jboss.errai.samples.restdemo.client.shared.CustomerService;
+import org.springframework.stereotype.Service;
 
 /**
  * Simple mock based service implementation.
  * 
  * @author Christian Sadilek <csadilek@redhat.com>
  */
+@Service("customerServiceBean")
 public class CustomerServiceImpl implements CustomerService {
 
   private static AtomicInteger id = new AtomicInteger(3);

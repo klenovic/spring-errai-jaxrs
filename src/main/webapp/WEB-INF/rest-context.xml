@@ -14,17 +14,14 @@
 
     <import resource="classpath:META-INF/cxf/cxf.xml" />
 
-    <bean id="jacksonJaxbJsonProviderBean" class="com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider" />
+    <bean id="jacksonJsonProviderBean" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 
     <jaxrs:server id="webService" address="/">
         <jaxrs:serviceBeans>
             <ref bean="customerServiceBean" />
         </jaxrs:serviceBeans>
         <jaxrs:providers>
-            <ref bean="jacksonJaxbJsonProviderBean" />
+            <ref bean="jacksonJsonProviderBean" />
         </jaxrs:providers>
     </jaxrs:server>
-
-    <bean id="customerServiceBean"
-        class="org.jboss.errai.samples.restdemo.server.CustomerServiceImpl" />
 </beans>
